@@ -1,3 +1,4 @@
+
 # Biblioteca Escolar
 
 ## Descripción del proyecto
@@ -61,16 +62,36 @@ Estos scripts deben ejecutarse en ese orden.
 
 ## Cómo ejecutar el proyecto
 
-1. Tener instalados Java, MySQL y un entorno compatible con Maven
-2. Abrir el proyecto en IntelliJ IDEA
-3. Ejecutar los scripts de la carpeta `sql` en MySQL Workbench
-4. Configurar la variable de entorno `BIBLIOTECA_DB_PASSWORD` con la contraseña del usuario de MySQL
-5. Revisar que los datos de conexión de `DatabaseConnection.java` correspondan a la instalación local de MySQL
-6. Ejecutar la clase `main.Main`
+1. Tener instalados Java, MySQL y un entorno compatible con Maven.
+2. Abrir el proyecto en IntelliJ IDEA.
+3. Ejecutar los scripts de la carpeta `sql` en MySQL Workbench.
+4. Configurar la variable de entorno `BIBLIOTECA_DB_PASSWORD` con la contraseña del usuario de MySQL.
+5. Revisar que los datos de conexión de `DatabaseConnection.java` correspondan a la instalación local de MySQL.
+6. Ejecutar la clase `main.Main`.
 
 Para configurar la contraseña desde IntelliJ IDEA, se puede ingresar a **Run → Edit Configurations → Environment variables** y agregar la variable indicada.
 
-La contraseña no se incluye directamente en el código fuente.
+La contraseña de MySQL no se incluye directamente en el código fuente.
+
+## Ejecución del archivo JAR
+
+Se dispone de una versión ejecutable de la aplicación llamada `Biblioteca_Escolar_FINAL.jar`, preparada para incluirse en el paquete de entrega.
+
+Para ejecutarla:
+
+1. Tener Java instalado y MySQL en ejecución.
+2. Crear y poblar la base de datos `biblioteca` mediante los scripts SQL incluidos.
+3. Abrir PowerShell en la carpeta donde se encuentra `Biblioteca_Escolar_FINAL.jar`.
+4. Ejecutar los siguientes comandos:
+
+```powershell
+$env:BIBLIOTECA_DB_PASSWORD = Read-Host "Contraseña de MySQL"
+java -jar ".\Biblioteca_Escolar_FINAL.jar"
+```
+
+El primer comando solicita la contraseña de MySQL y configura la variable de entorno para esa sesión de PowerShell. El segundo inicia la aplicación.
+
+El archivo JAR se incluirá en el ZIP de entrega; no forma parte de los archivos publicados en el repositorio GitHub.
 
 ## Pruebas realizadas
 
