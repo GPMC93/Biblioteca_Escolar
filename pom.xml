@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Blibioteca_Escolar</artifactId>
+    <artifactId>Biblioteca_Escolar</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

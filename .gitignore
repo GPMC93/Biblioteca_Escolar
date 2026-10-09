@@ -40,3 +40,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Archivos generados y ejecutable de respaldo ###
+out/
+Biblioteca_Escolar_FINAL.jar
